@@ -1,23 +1,27 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    connection_pool (2.4.1)
     json (1.0.0)
-    rack (2.0.1)
-    rack-cache (1.1)
+    rack (3.0.10)
+    rack-cache (1.16.0)
       rack (>= 0.4)
-    redis (2.2.2)
-    redis-rack-cache (1.1)
-      rack-cache (= 1.1)
-      redis-store (= 1.1.0)
-    redis-store (1.1.0)
-      redis (~> 2.2.0)
+    redis (5.1.0)
+      redis-client (>= 0.17.0)
+    redis-client (0.21.1)
+      connection_pool
+    redis-rack-cache (1.2)
+      rack-cache (~> 1.2)
+      redis-store (~> 1.1.0)
+    redis-store (1.1.7)
+      redis (>= 2.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   json (= 1.0.0)
-  redis-rack-cache (= 1.1)
+  redis-rack-cache (= 1.2)
 
 BUNDLED WITH
-   1.13.6
+   1.17.3
